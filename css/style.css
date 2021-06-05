@@ -191,10 +191,15 @@ footer {
 .modal-close-bt:focus {
   box-shadow: none;
 }
+.modal-close-bt:hover .modal-icon,
+.modal-close-bt:focus .modal-icon {
+  fill: var(--color-link);
+}
 .modal-icon {
   width: 18px;
   height: 18px;
   fill: #000000;
+  transition: fill var(--time-animation) var(--cubic);
 }
 .modal-form {
   display: flex;
@@ -259,17 +264,19 @@ footer {
 }
 .form-textarea:focus {
   border-color: var(--color-link);
+  outline: none;
 }
 .form-checkbox-policy {
-  padding-left: 1.2em;
+  position: relative;
   margin-bottom: 30px;
+  padding-left: 32px;
 }
 .checkbox-icon {
   position: absolute;
   display: block;
-  width: 1em;
-  height: 1em;
-  margin-left: -1.2em;
+  width: 16px;
+  height: 15px;
+  left: 10px;
   border: 1px solid #000000;
   border-radius: 4px;
 }
@@ -278,6 +285,11 @@ footer {
   background-image: url(../img/icon-check.svg);
   background-size: contain;
   background-origin: border-box;
+}
+.form-btn {
+  width: 200px;
+  height: 50px;
+  align-self: center;
 }
 /* ==============END MODAL WINDOW============== */
 /*=============HEADER=============*/
@@ -746,22 +758,26 @@ footer {
   color: #ffffff;
   margin-bottom: 12px;
 }
+.footer-form {
+  display: flex;
+  align-items: center;
+}
 .footer-input {
   width: 358px;
   height: 55px;
+  color: var(--color-text-two);
   background: #2f303a;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   padding-left: 16px;
+  margin-right: 12px;
 }
 .footer-input::placeholder {
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 1.25;
-
-  align-items: center;
 
   color: rgba(255, 255, 255, 0.6);
 }
@@ -779,7 +795,6 @@ footer {
 
   padding: 10px 28px;
   border-radius: 4px;
-  align-items: center;
   border: 1px solid transparent;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   transition: background-color var(--time-animation) var(--cubic);
